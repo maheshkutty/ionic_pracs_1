@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "wikia_api",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

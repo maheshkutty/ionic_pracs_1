@@ -1,0 +1,7 @@
+{
+  "name": "wikia_api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
