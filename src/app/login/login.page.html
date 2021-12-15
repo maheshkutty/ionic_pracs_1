@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="login" (ngSubmit)="showMsg()" novalidate>
+    <ion-item style="margin-top: 100px; margin-left: 10px; margin-right: 10px">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" required></ion-input>
+      <span class="error" *ngIf="isSubmitted && errorControl.email.errors?.required">
+        Email is required.
+      </span>
+      <ion-icon name="mail-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item style="margin-left: 10px; margin-right: 10px">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="password" required></ion-input>
+      <span class="error" *ngIf="isSubmitted && errorControl.password.errors?.required">
+        Password is required.
+      </span>
+      <ion-icon name="eye-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-button
+      color="primary"
+      style="margin-left: 15px; margin-top: 8px"
+      type="submit"
+      >Submit</ion-button
+    >
+  </form>
+</ion-content>

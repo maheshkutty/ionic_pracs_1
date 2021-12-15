@@ -1,0 +1,14 @@
+get https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Nelson%20Mandela&format=json
+
+###
+get https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Hello&format=json
+
+###
+get https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=Pet_door&formatversion=2&rvprop=content&rvslots=*
+
+###
+get http://en.wikipedia.org/w/api.php?pageids=6710844&action=query&format=json&prop=extracts&exsectionformat=plain&explaintext
+
+
+###
+get http://en.wikipedia.org/w/api.php?action=query&prop=pageimages&pageids=21492751&format=json

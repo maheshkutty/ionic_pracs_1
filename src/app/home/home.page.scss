@@ -1,11 +1,12 @@
 #container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  // text-align: center;
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // top: 20%;
+  // transform: translateY(-50%);
 }
 
 #container strong {
@@ -24,4 +25,21 @@
 
 #container a {
   text-decoration: none;
+}
+
+#searchContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin-left: 0px;
+}
+
+
+.articlecontainer{
+  margin: 8px;
+  border: 1px solid #001f3f;
+  padding: 5px;
+  border-radius: 5px;
+  
 }

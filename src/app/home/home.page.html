@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Wiki Search </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large" >WIKI Search</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item class="searchContainer" style="margin-top: 10px; margin-bottom: 10px;">
+      <ion-icon name="search-outline" style="margin-right: 5px"></ion-icon>
+      <ion-input [(ngModel)]="query" inputmode="search"></ion-input>
+    </ion-item>
+    <ion-button color="primary" (click)="checkQuery()">Click</ion-button>
+    <ion-list [class.listdisplay]="true">
+      <ion-text color="success">
+        <h1 style="text-align: center; color:#001f3f; font-weight: bold;">List of articles</h1>
+      </ion-text>
+      <ion-item-sliding>
+        <div *ngFor="let item of searchList" class="articlecontainer">
+            <!-- <ion-icon name="arrow-forward-outline" style="margin-right: 5px;"></ion-icon> -->
+            <a [routerLink]="['/info', item.pageid]"><h3 style="color:#FF4136; font-weight: bold;">{{item.title}}</h3></a>
+            <p [innerHTML]="item.snippet" style="color: #001f3f;"></p>
+        </div>
+      </ion-item-sliding>
+    </ion-list>
   </div>
 </ion-content>
